@@ -48,35 +48,3 @@ def calcular_inversa(matriz):
 def mostrar_matriz(matriz):
     for fila in matriz:
         print(fila)
-
-
-# Menú principal
-while True:
-    print("Cálculo de la Matriz Inversa:")
-    print("1. Ingresar una matriz")
-    print("2. Salir")
-    opcion = input("Seleccione una opción: ")
-
-    if opcion == "1":
-        filas = int(input("Ingrese el número de filas de la matriz: "))
-        columnas = int(input("Ingrese el número de columnas de la matriz: "))
-
-        matriz = ingresar_matriz(filas, columnas)
-        matriz_inversa = calcular_inversa(matriz)
-
-        if matriz_inversa is not None:
-            print("\nProcedimiento paso a paso:")
-            print("Matriz original:")
-            mostrar_matriz(matriz)
-            print("\nMatriz identidad extendida:")
-            mostrar_matriz(np.concatenate((np.array(matriz), np.eye(filas)), axis=1))
-            print("\nEliminación Gaussiana:")
-            mostrar_matriz(np.array(matriz_inversa))
-            print("\nLa matriz inversa es:")
-            mostrar_matriz(matriz_inversa)
-        else:
-            print("\nLa matriz no tiene inversa.")
-    elif opcion == "2":
-        break
-    else:
-        print("Opción inválida. Por favor, ingrese una opción válida.\n")

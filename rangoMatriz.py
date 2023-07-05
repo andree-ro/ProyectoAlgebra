@@ -51,26 +51,3 @@ def mostrar_paso_a_paso(matriz):
 
     print("\n2. Paso a paso del cálculo:")
     print(f"   El rango final de la matriz es: {rango}")
-
-# Menú principal
-while True:
-    print("Cálculo del Rango de una Matriz:")
-    print("1. Ingresar una matriz")
-    print("2. Salir")
-    opcion = input("Seleccione una opción: ")
-
-    if opcion == "1":
-        filas = int(input("Ingrese el número de filas de la matriz: "))
-        columnas = int(input("Ingrese el número de columnas de la matriz: "))
-
-        matriz = ingresar_matriz(filas, columnas)
-
-        print("\nLa matriz ingresada es:")
-        for fila in matriz:
-            print(f"   {fila}")
-
-        mostrar_paso_a_paso(matriz)
-    elif opcion == "2":
-        break
-    else:
-        print("Opción inválida. Por favor, ingrese una opción válida.\n")

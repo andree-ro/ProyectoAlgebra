@@ -53,23 +53,3 @@ def calcular_distribucion_estacionaria(matriz, estado_inicial, num_iteraciones):
     distribucion_estacionaria = distribucion_actual
 
     return distribucion_estacionaria
-
-# Programa principal
-print("Programa para resolver una cadena de Markov.\n")
-
-matriz = ingresar_matriz()
-
-print("\nMatriz de transición:")
-print(np.array(matriz))
-
-estado_inicial = input("Ingrese el estado inicial separado por comas: ")
-estado_inicial = [float(x.strip()) for x in estado_inicial.split(",")]
-print(estado_inicial)
-
-num_iteraciones = int(input("Ingrese el número de iteraciones: "))
-
-distribucion_estacionaria = calcular_distribucion_estacionaria(matriz, estado_inicial, num_iteraciones)
-
-print("\nLa distribución estacionaria es:")
-for i, probabilidad in enumerate(distribucion_estacionaria):
-    print(f"P({i}) = {probabilidad}")

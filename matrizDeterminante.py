@@ -61,27 +61,3 @@ def mostrar_resultado(determinante, etapas):
     for etapa in etapas:
         print(etapa)
     print(f"\nEl determinante de la matriz es: {determinante}")
-
-
-# Main menu
-while True:
-    print("\nCálculo del Determinante de una Matriz:")
-    print("1. Ingresar una matriz")
-    print("2. Salir")
-    opcion = input("Seleccione una opción: ")
-
-    if opcion == "1":
-        matriz = ingresar_matriz()
-
-        print("\nLa matriz ingresada es:")
-        for fila in matriz:
-            print(f"   {fila}")
-
-        determinante, etapas = calcular_determinante(matriz)
-        mostrar_resultado(determinante, etapas)
-
-    elif opcion == "2":
-        break
-
-    else:
-        print("Opción inválida. Por favor, ingrese una opción válida.\n")

@@ -172,10 +172,3 @@ def mostrar_procedimiento(sistema):
     print(f"     = {z}\n")
 
     mostrar_resultado(x, y, z)
-
-# Programa principal
-print("Programa para resolver un sistema de ecuaciones lineales 3x3 por el método de Sarrus.\n")
-
-sistema = ingresar_sistema()
-
-mostrar_procedimiento(sistema)
